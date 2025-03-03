@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" type="image/gif" href="r47.gif">
+	<meta charset="UTF-8">
+	<title>Formular de înregistrare</title>
+	<style>
+		body {
+			background-color: #1E1E1E;
+			color: yellow;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		input[type=text], input[type=email], input[type=password] {
+			padding: 10px;
+			margin: 10px;
+			border: none;
+			border-radius: 5px;
+			width: 300px;
+			font-size: 18px;
+		}
+
+		input[type=submit] {
+			padding: 10px 20px;
+			margin: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #3E8E41;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="nume">Nume:</label>
+		<input type="text" id="nume" name="nume" required>
+
+		<label for="prenume">Prenume:</label>
+		<input type="text" id="prenume" name="prenume" required>
+
+		<label for="email">E-mail:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="parola">Parolă (minim 10 caractere, una mare și una mică):</label>
+		<input type="password" id="parola" name="parola" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" required>
+
+		<input type="submit" value="Înregistrare">
+	</form>
+</body>
+</html>
+
+
+
+
